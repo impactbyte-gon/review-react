@@ -24,4 +24,4 @@
 
 ## Architecture
 
-![](assets/architecture.png)
+![](public/assets/architecture.png)
