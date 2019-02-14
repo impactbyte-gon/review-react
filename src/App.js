@@ -29,11 +29,33 @@ class App extends Component {
     })
   }
 
+  editTask = index => {
+    const text = prompt(`Edit text for index ${index}:`)
+
+    if (text !== null) {
+      const newTasks = this.state.tasks.map((item, itemIndex) => {
+        if (index === itemIndex) {
+          return text
+        } else {
+          return item
+        }
+      })
+
+      this.setState({
+        tasks: newTasks
+      })
+    }
+  }
+
   render() {
     return (
       <div>
         <Form addTask={this.addTask} />
-        <List tasks={this.state.tasks} deleteTask={this.deleteTask} />
+        <List
+          tasks={this.state.tasks}
+          deleteTask={this.deleteTask}
+          editTask={this.editTask}
+        />
       </div>
     )
   }

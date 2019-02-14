@@ -15,6 +15,13 @@ class List extends React.Component {
               >
                 DELETE
               </button>
+              <button
+                onClick={() => {
+                  this.props.editTask(index)
+                }}
+              >
+                EDIT
+              </button>
             </li>
           )
         })}
