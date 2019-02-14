@@ -4,9 +4,9 @@ class List extends React.Component {
   render() {
     return (
       <ul>
-        <li>Learning JavaScript</li>
-        <li>Eating a lunch</li>
-        <li>Sleeping on the bed</li>
+        {this.props.tasks.map((task, index) => {
+          return <li key={index}>{task}</li>
+        })}
       </ul>
     )
   }
