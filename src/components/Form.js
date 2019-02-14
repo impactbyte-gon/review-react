@@ -1,4 +1,22 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledForm = styled.form``
+
+const InputText = styled.input`
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+`
+
+const InputSubmit = styled.input`
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  margin-left: 10px;
+`
 
 class Form extends React.Component {
   constructor() {
@@ -16,20 +34,20 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form
+      <StyledForm
         onSubmit={event => {
           event.preventDefault()
           this.props.addTask(this.state.inputText)
         }}
       >
-        <input
+        <InputText
           type="text"
           placeholder="Your task here"
           value={this.state.inputText}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Add" />
-      </form>
+        <InputSubmit type="submit" value="Add" />
+      </StyledForm>
     )
   }
 }
