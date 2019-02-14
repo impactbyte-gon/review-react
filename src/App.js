@@ -11,10 +11,18 @@ class App extends Component {
     }
   }
 
+  addTask = inputText => {
+    const newTasks = this.state.tasks.concat(inputText)
+
+    this.setState({
+      tasks: newTasks
+    })
+  }
+
   render() {
     return (
       <div>
-        <Form />
+        <Form addTask={this.addTask} />
         <List tasks={this.state.tasks} />
       </div>
     )

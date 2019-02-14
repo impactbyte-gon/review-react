@@ -17,7 +17,12 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
+      <form
+        onSubmit={event => {
+          event.preventDefault()
+          this.props.addTask(this.state.inputText)
+        }}
+      >
         <input
           type="text"
           placeholder="Your task here"

@@ -7,8 +7,8 @@
 - Separate App component into several components
 - Put state and props into each components
 - Put function to update state in component (setState)
-- Pass data into child component from parent component (from top to bottom)
-- Pass data from child component into parent component (from bottom to top)
+- Pass data/function into child component from parent component (from top to bottom)
+- Pass data/function from child component into parent component (from bottom to top)
 - Styling with styled-components
 
 ## Indonesian
