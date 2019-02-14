@@ -9,6 +9,7 @@
 - Put function to update state in component (setState)
 - Pass data/function into child component from parent component (from top to bottom)
 - Pass data/function from child component into parent component (from bottom to top)
+- Use parameter in function from props to pass it to the parent component
 - Styling with styled-components
 
 ## Indonesian

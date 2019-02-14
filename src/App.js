@@ -19,11 +19,21 @@ class App extends Component {
     })
   }
 
+  deleteTask = index => {
+    const newTasks = this.state.tasks.filter((item, itemIndex) => {
+      return index !== itemIndex
+    })
+
+    this.setState({
+      tasks: newTasks
+    })
+  }
+
   render() {
     return (
       <div>
         <Form addTask={this.addTask} />
-        <List tasks={this.state.tasks} />
+        <List tasks={this.state.tasks} deleteTask={this.deleteTask} />
       </div>
     )
   }

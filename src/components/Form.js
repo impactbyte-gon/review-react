@@ -9,7 +9,6 @@ class Form extends React.Component {
   }
 
   handleChange = event => {
-    // this.handleChange = this.handleChange.bind(this)
     this.setState({
       inputText: event.target.value
     })
