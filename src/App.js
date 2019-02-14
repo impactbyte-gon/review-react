@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
 
+import Form from './components/Form'
+import List from './components/List'
+
 class App extends Component {
   render() {
     return (
       <div>
-        <form>
-          <input type="text" placeholder="What task to do?" />
-          <input type="submit" value="Add" />
-        </form>
-        <ul>
-          <li>Learning JavaScript</li>
-          <li>Eating a lunch</li>
-          <li>Sleeping on the bed</li>
-        </ul>
+        <Form />
+        <List />
       </div>
     )
   }
