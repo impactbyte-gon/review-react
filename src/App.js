@@ -4,7 +4,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Review React</h1>
+        <form>
+          <input type="text" placeholder="What task to do?" />
+          <input type="submit" value="Add" />
+        </form>
+        <ul>
+          <li>Learning JavaScript</li>
+          <li>Eating a lunch</li>
+          <li>Sleeping on the bed</li>
+        </ul>
       </div>
     )
   }
